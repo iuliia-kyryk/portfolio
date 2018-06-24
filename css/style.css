@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    font-family: 'Kalam', cursive;
+}
+
+.container {
+    height: 100vh;
+    min-height: 620px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container .container-header {
+    text-align: center;
+}
+
+.container .header-name {
+    margin: 0;
+    font-size: 3em;
+    padding-top: 20px;
+}
+
+.container .list {
+    height: 500px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.container .list .list-item {
+    margin: 40px 10px 20px 80px;
+    transition: 0.4s;
+}
+
+.container .list .list-item .list-link::before {
+    content: "\f09b";
+    font-family: FontAwesome;
+    font-size: 2em;
+    position: absolute;
+    top: 6px;
+    left: -60px;
+}
+
+.container .list .list-item .list-link {
+    font-size: 1.6em;
+    position: relative;
+}
+
+.container .container-header .header-link,
+.container .list .list-item .list-link {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.container .list .list-item .list-link:hover,
+.container .container-header .header-link:hover {
+    color: #42d4ad;
+}
+
+.container .list .list-item .list-info {
+    font-size: 0.5em;
+    display: block;
+}
+
+@media(max-width: 767px) {
+    .container .list {
+        height: auto;
+    }
+    .container {
+        height: auto;
+    }
+}
